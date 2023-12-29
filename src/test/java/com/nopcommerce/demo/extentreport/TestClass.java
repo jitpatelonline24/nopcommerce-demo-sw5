@@ -37,7 +37,7 @@ public class TestClass {
         reports.setSystemInfo("Browser Version","119.1.2");
 
         //Create the Test
-        ExtentTest test = reports.createTest("Login Test").assignAuthor("Jitesh").assignCategory("Sanity");
+        ExtentTest test = reports.createTest("Sanity Test").assignAuthor("Jitesh").assignCategory("Sanity");
         test.pass("Login Test Starts successfully");
         test.info("Url is loaded");
         test.info("Values entered");
@@ -57,7 +57,5 @@ public class TestClass {
 
         reports.flush(); // flush the report - Unless you can call this method report will not be written the logs
         Desktop.getDesktop().browse(new File("extent.html").toURI()); // This will open the file in the default browser - desktop
-
-
     }
 }

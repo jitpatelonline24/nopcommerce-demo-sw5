@@ -12,7 +12,7 @@ import org.testng.ITestResult;
 import static com.nopcommerce.demo.utility.Utility.takeScreenShot;
 
 /**
- * Created by Jay Vaghani
+ * Created by Jitesh Patel
  */
 public class CustomListeners implements ITestListener {
 

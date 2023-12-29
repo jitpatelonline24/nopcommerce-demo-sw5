@@ -8,10 +8,12 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by Jay Vaghani
+ * Created by Jitesh Patel
  */
 public class LoginPage extends Utility {
-
+    @CacheLookup
+    @FindBy(linkText = "Log in")
+    WebElement loginLink;
     @CacheLookup
     @FindBy(xpath = "//h1[contains(text(),'Welcome, Please Sign In!')]")
     WebElement welcomeText;
@@ -33,7 +35,9 @@ public class LoginPage extends Utility {
     @FindBy(xpath = "//div[@class='message-error validation-summary-errors']")
     WebElement errorMessage;
     //By errorMessage = By.xpath("//div[@class='message-error validation-summary-errors']");
-
+    public void clickOnLoginLink(){
+        clickOnElement(loginLink);
+    }
     public String getWelcomeText() {
         String message = getTextFromElement(welcomeText);
         return message;
@@ -58,5 +62,11 @@ public class LoginPage extends Utility {
         String message = getTextFromElement(errorMessage);
         CustomListeners.test.log(Status.PASS, "Get errorMessage");
         return message;
+    }
+    public void logIn(String emailId, String password){
+        clickOnLoginLink();
+        enterEmailId(emailId);
+        enterPassword(password);
+       clickOnLoginButton();
     }
 }

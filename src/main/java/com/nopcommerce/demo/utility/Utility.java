@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.function.Function;
 
 /**
- * Created by Jay Vaghani
+ * Created by Jitesh Patel
  */
 public class Utility extends ManageBrowser {
     /*Utility Class extends to ManageDriver for the driver to finding locators

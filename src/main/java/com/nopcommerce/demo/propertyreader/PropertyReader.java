@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 /**
- * Created by Jay Vaghani
+ * Created by Jitesh Patel
  */
 public class PropertyReader {
 
@@ -44,7 +44,7 @@ public class PropertyReader {
         Properties prop = new Properties();
         FileInputStream inputStream = null;
         try {
-            inputStream = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/propertiesfile/config.properties");
+            inputStream = new FileInputStream(System.getProperty("user.dir")+"/src/test/java/resources/propertiesfile/config.properties");
             prop.load(inputStream);
             if (prop.getProperty(propertyName) != null){
                 return prop.getProperty(propertyName);

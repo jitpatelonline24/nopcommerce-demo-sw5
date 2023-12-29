@@ -17,7 +17,7 @@ public class ManageBrowser {
     private String baseUrl = PropertyReader.getInstance().getProperty("baseUrl");
     private int implicitlyWait = Integer.parseInt(PropertyReader.getInstance().getProperty("implicitlyWait"));
 
-    public ManageBrowser (){
+    public ManageBrowser(){
         PageFactory.initElements(driver,this);
     }
 
